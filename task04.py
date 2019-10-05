@@ -17,7 +17,7 @@ while True:
 
 d_lin = lin.copy()
 print("Выводжу на экран и удаляю, с начала, элементы списка: ", d_lin)
-for i in range(len(d_lin)):
+while d_lin:
     print(d_lin.pop(0))
 print("Теперь в списке осталось: ", d_lin)
 
@@ -34,6 +34,20 @@ d_lin.sort()
 while d_lin:
     print(d_lin[0])
     d_lin = d_lin[1:]
+print("Теперь в списке осталось: ", d_lin)
+
+d_lin = lin.copy()
+print("Выводжу на экран и удаляю элементы несортированного списка", d_lin, "от самого маленького до самого большого")
+while d_lin:
+    min_lin = d_lin[0]
+    for i in range(len(d_lin)):
+        if min_lin > d_lin[i]:
+            min_lin = d_lin[i]
+    print(min_lin)
+    try:
+        d_lin.remove(min_lin)
+    except ValueError:
+        break
 print("Теперь в списке осталось: ", d_lin)
 
 d_lin = lin.copy()
