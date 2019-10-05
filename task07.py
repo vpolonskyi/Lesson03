@@ -2,7 +2,8 @@ line = """We are not what we should be!
 We are not what we need to be.
 But at least we are not what we used to be
  (Football Coach)
- Smile :-)
+ Smile:-)
+ bbe, bbe.
 """
 
 print(line)
@@ -12,10 +13,8 @@ l_line = line.split()
 print("Слов в тексте:", len(line.split()))
 
 for i in l_line:
-    a = str(i)
-    for ii in (",", "!", ".", "(", ")", ":"):
-        a = a.strip(ii)
-    a = a.strip()
+    a = str(l_line[l_line.index(i)])
+    a = a.strip("-,!.():; ")
     l_line[l_line.index(i)] = a
 
 print("Удаляю знаки препинания в списке слов:", l_line)
