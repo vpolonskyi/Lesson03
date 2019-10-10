@@ -13,9 +13,7 @@ l_line = line.split()
 print("Слов в тексте:", len(line.split()))
 
 for i in l_line:
-    a = str(l_line[l_line.index(i)])
-    a = a.strip("-,!.():; ")
-    l_line[l_line.index(i)] = a
+    l_line[l_line.index(i)] = i.strip("-,!.():; ")
 
 print("Удаляю знаки препинания в списке слов:", l_line)
 

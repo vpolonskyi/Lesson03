@@ -43,11 +43,11 @@ def triangle_plus(x, y, z):
         x, y, z = float(x), float(y), float(z)
     except ValueError:
         return None
-    if x == y == z and x + y > z and x + z > y and y + z > x:
+    if x == y == z and triangle(x, y, z):
         return "Equilateral triangle"
-    elif (x == y != z or x != y == z or x == z != y) and x + y > z and x + z > y and y + z > x:
+    elif (x == y != z or x != y == z or x == z != y) and triangle(x, y, z):
         return "Isosceles triangle"
-    elif x + y > z and x + z > y and y + z > x:
+    elif triangle(x, y, z):
         return "Versatile triangle"
     else:
         return "Not a triangle"

@@ -51,6 +51,17 @@ while d_lin:
 print("Теперь в списке осталось: ", d_lin)
 
 d_lin = lin.copy()
+print("Выводжу на экран и удаляю элементы несортированного списка", d_lin, "от самого маленького до самого большого")
+print("(реализация с min)")
+while d_lin:
+    try:
+        print(min(d_lin))
+        d_lin.remove(min(d_lin))
+    except ValueError:
+        break
+print("Теперь в списке осталось: ", d_lin)
+
+d_lin = lin.copy()
 for i in range(len(d_lin)):
     if d_lin[i] <= 0:
         d_lin[i] = 0
